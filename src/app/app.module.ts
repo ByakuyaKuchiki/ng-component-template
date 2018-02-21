@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// -- import form modules - builder
+import { FormsModule } from '@angular/forms';
+
 // -- import routing module
 import { RouterModule, PreloadAllModules } from '@angular/router';
 
@@ -16,19 +19,23 @@ import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
+import { GoogleAdressComponent } from './google-adress/google-adress.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    GoogleMapComponent
+    GoogleMapComponent,
+    GoogleAdressComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
+    FormsModule,
     NgbModule.forRoot(),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCLHISIRyFKWJ9XdCJ5-5S1zXZe9WywEGw'
+      apiKey: 'AIzaSyCLHISIRyFKWJ9XdCJ5-5S1zXZe9WywEGw',
+      libraries: ["places"]
     }),
     RouterModule.forRoot(APPROUTES, {
       useHash: Boolean(history.pushState) === false,
