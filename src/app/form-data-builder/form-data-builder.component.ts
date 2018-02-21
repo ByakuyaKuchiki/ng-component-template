@@ -35,6 +35,9 @@ export class FormDataBuilderComponent {
       .debounceTime(200)
       .distinctUntilChanged()
       .map(term => term.length < 3 ? []
-        : this.data.filter(v => v.fullname.indexOf(term.toLowerCase()) > -1).slice(0, 10));
+        : () => {
+          // https://jsonplaceholder.typicode.com/users
+          return this.data.filter(v => v.fullname.indexOf(term.toLowerCase()) > -1).slice(0, 10);
+        });
 
 }
