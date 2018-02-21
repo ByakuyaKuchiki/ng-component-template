@@ -20,13 +20,15 @@ import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
 import { GoogleAdressComponent } from './google-adress/google-adress.component';
+import { FormDataBuilderComponent } from './form-data-builder/form-data-builder.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     GoogleMapComponent,
-    GoogleAdressComponent
+    GoogleAdressComponent,
+    FormDataBuilderComponent
   ],
   imports: [
     BrowserModule,

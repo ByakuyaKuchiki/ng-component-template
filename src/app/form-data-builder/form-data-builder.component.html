@@ -1,0 +1,10 @@
+
+<ng-template #onlyFullname let-user="result" let-t="term">
+    {{user.fullname}}, {{user.phone}}
+</ng-template>
+
+<input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [inputFormatter]="formatter" [resultTemplate]="onlyFullname"/>
+<hr>
+<input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [inputFormatter]="formatter" [resultFormatter]="formatter"/>
+<hr>
+<pre>Model: {{ model | json }}</pre>
