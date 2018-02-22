@@ -16,11 +16,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // -- import google map plugin: you need a google API Key
 import { AgmCoreModule } from '@agm/core';
 
+// -- import text formater
+import { TextMaskModule } from 'angular2-text-mask';
+
 
 import { AppComponent } from './app.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
 import { GoogleAdressComponent } from './google-adress/google-adress.component';
 import { FormDataBuilderComponent } from './form-data-builder/form-data-builder.component';
+import { PhoneInputComponent } from './phone-input/phone-input.component';
 
 
 @NgModule({
@@ -28,12 +32,14 @@ import { FormDataBuilderComponent } from './form-data-builder/form-data-builder.
     AppComponent,
     GoogleMapComponent,
     GoogleAdressComponent,
-    FormDataBuilderComponent
+    FormDataBuilderComponent,
+    PhoneInputComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     FormsModule,
+    TextMaskModule,
     NgbModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCLHISIRyFKWJ9XdCJ5-5S1zXZe9WywEGw',
